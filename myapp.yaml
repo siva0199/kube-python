@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: kube-python=docker.io/sivakrishna19/kube-python
+    argocd-image-updater.argoproj.io/kube-python.update-strategy: latest
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/siva0199/kube-python.git'  # Your GitHub repo
+    path: 'manifests'  # Change if your YAML files are in a different folder
+    targetRevision: main
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

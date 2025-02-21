@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/siva0199/kube-python.git'  # Your GitHub repo
-    path: 'manifests'  # Change if your YAML files are in a different folder
+    path: '.'  # Change if your YAML files are in a different folder
     targetRevision: main
   destination:
     server: 'https://kubernetes.default.svc'

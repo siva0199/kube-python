@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: myapp
   namespace: argocd
+  annotations:
+  argocd-image-updater.argoproj.io/image-list: kube-python=docker.io/sivakrishna19/mypython-image
+  argocd-image-updater.argoproj.io/kube-python.update-strategy: latest
 spec:
   project: default
   source:

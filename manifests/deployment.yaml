@@ -2,9 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-app
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: kube-python=docker.io/sivakrishna19/mypython-image
-    argocd-image-updater.argoproj.io/kube-python.update-strategy: latest
 spec:
   replicas: 2
   selector:

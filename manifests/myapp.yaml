@@ -4,15 +4,14 @@ metadata:
   name: myapp
   namespace: argocd
   annotations:
-  argocd-image-updater.argoproj.io/image-list: kube-python=docker.io/sivakrishna19/mypython-image
-  argocd-image-updater.argoproj.io/kube-python.update-strategy: latest
+    argocd-image-updater.argoproj.io/image-list: kube-python=docker.io/sivakrishna19/mypython-image
+    argocd-image-updater.argoproj.io/docker.io/sivakrishna19/mypython-image.update-strategy: latest
 spec:
   project: default
   source:
     repoURL: 'https://github.com/siva0199/kube-python.git'  # Your GitHub repo
     path: manifests  # Change if your YAML files are in a different folder
     targetRevision: main
-    kustomize: {}
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kube-python
-        image: docker.io/sivakrishna19/mypython-image:v1.6  # No hardcoded tag
+        image: docker.io/sivakrishna19/mypython-image
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

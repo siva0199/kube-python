@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/sivakrishna19/mypython-image:v1.16

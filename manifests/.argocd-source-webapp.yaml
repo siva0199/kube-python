@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - docker.io/sivakrishna19/argocdimage:1.12
+  - docker.io/sivakrishna19/argocdimage:1.13

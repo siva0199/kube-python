@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/sivakrishna19/argocdimage:1.15
